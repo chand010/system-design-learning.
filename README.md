@@ -14,6 +14,8 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 6 | Database fundamentals | [Read lesson](docs/day-06-database-fundamentals.md) |
 | 7 | Database scaling | [Read lesson](docs/day-07-database-scaling.md) |
 | 8 | Load balancing and high availability | [Read lesson](docs/day-08-load-balancing.md) |
+| 9 | URL shortener design | [Read lesson](docs/day-09-url-shortener-design.md) |
+| 10 | Rate limiter design | [Read lesson](docs/day-10-rate-limiter-design.md) |
 
 ## Learning workflow
 1. Read the lesson for the day.
@@ -23,12 +25,13 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 5. Review earlier lessons as new concepts build on them.
 
 ## Planned next topic
-**Day 9 — URL Shortener Design**: requirements, API design, short-code generation, data model, redirects, caching, analytics, and abuse prevention.
+**Day 11 — Message Queues and Asynchronous Processing**: producers, consumers, queues, retries, dead-letter queues, delivery guarantees, and when asynchronous work improves resilience.
 
 ## Suggested learning resources
 - [GeeksforGeeks System Design Tutorial](https://www.geeksforgeeks.org/system-design/system-design-tutorial/)
 - [Codecademy](https://www.codecademy.com/)
 - [Google SRE Books](https://sre.google/books/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/current/)
+- [Resource change log](RESOURCE-CHANGELOG.md)
 
 This repository is a learning notebook. Examples are educational and should be reviewed and tested before production use.
