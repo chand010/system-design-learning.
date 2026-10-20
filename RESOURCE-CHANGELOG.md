@@ -38,3 +38,12 @@ This is the initial baseline; there was no earlier resource-change log in this r
 ### Important limitation
 
 The baseline establishes a starting point only. Without earlier snapshots or revision histories, a changed displayed date does not establish the exact content differences. On this review, no verified source change was found that materially requires rewriting existing Days 1–9 lesson explanations. The README was updated to index the newly published Day 10 lesson, and this log records the source review.
+
+
+## Review — 20 October 2026
+
+Official pages checked: [GeeksforGeeks System Design Tutorial](https://www.geeksforgeeks.org/system-design/system-design-tutorial/) currently reports “Last Updated: 5 Sep, 2026”, matching the 17 October check but differing from the 15 October baseline's recorded 17 Apr date. No saved snapshots are available to establish why the displayed dates differ or what exact text changed. No material lesson correction was verified.
+
+[GeeksforGeeks Database Replication](https://www.geeksforgeeks.org/system-design/database-replication-and-their-types-in-system-design/) reports 17 Apr 2026 and was used as a Day 13 reference, not treated as proof of a new change. [Codecademy Helpful Resources](https://help.codecademy.com/hc/en-us/articles/360045725434-Helpful-Codecademy-Resources) still reports 24 Feb 2026. [Google SRE Books](https://sre.google/books/) currently labels both “Site Reliability Engineering, 2nd Edition” and “AI Engineering Reliable Operations” as new; without an earlier snapshot, the timing of the latter's appearance cannot be verified. The current [PostgreSQL partitioning](https://www.postgresql.org/docs/current/ddl-partitioning.html) and [replication](https://www.postgresql.org/docs/current/high-availability.html) pages document PostgreSQL 18 and link a PostgreSQL 19 RC 1 announcement dated 15 Oct 2026. The current [MongoDB sharding manual](https://www.mongodb.com/docs/manual/sharding/) covers shard keys, routing, and balancing.
+
+Affected lessons: Day 13 uses these current database references. No verified external change required rewriting Days 1–13. The Day 12 update was a completeness repair because its previous repository file contained only an introduction, not a response to an external source change.
