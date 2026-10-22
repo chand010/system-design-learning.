@@ -16,8 +16,14 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 8 | Load balancing and high availability | [Read lesson](docs/day-08-load-balancing.md) |
 | 9 | URL shortener design | [Read lesson](docs/day-09-url-shortener-design.md) |
 | 10 | Rate limiter design | [Read lesson](docs/day-10-rate-limiter-design.md) |
+| 11 | Message queues and asynchronous processing | [Read lesson](docs/day-11-message-queues-and-asynchronous-processing.md) |
+| 12 | Consistency, eventual consistency, and distributed workflows | [Read lesson](docs/day-12-consistency-eventual-consistency-distributed-workflows.md) |
+| 13 | Database replication, sharding, and partitioning | [Read lesson](docs/day-13-database-replication-sharding-and-partitioning.md) |
+| 14 | News feed system design | [Read lesson](docs/day-14-news-feed-system-design.md) |
+| 15 | Resilience: timeouts, retries, circuit breakers, and bulkheads | [Read lesson](docs/day-15-resilience-timeouts-retries-circuit-breakers.md) |
 
 ## Learning workflow
+
 1. Read the lesson for the day.
 2. Try the practical exercise before checking any suggested answer.
 3. Write down questions and trade-offs.
@@ -25,13 +31,16 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 5. Review earlier lessons as new concepts build on them.
 
 ## Planned next topic
-**Day 11 — Message Queues and Asynchronous Processing**: producers, consumers, queues, retries, dead-letter queues, delivery guarantees, and when asynchronous work improves resilience.
+
+**Day 16 — Event-Driven Architecture and Pub/Sub**: events, topics, subscriptions, fan-out, event contracts, and the trade-offs between event-driven and request-response communication.
 
 ## Suggested learning resources
+
 - [GeeksforGeeks System Design Tutorial](https://www.geeksforgeeks.org/system-design/system-design-tutorial/)
 - [Codecademy](https://www.codecademy.com/)
 - [Google SRE Books](https://sre.google/books/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/current/)
+- [Additional concepts backlog](docs/additional-concepts.md)
 - [Resource change log](RESOURCE-CHANGELOG.md)
 
 This repository is a learning notebook. Examples are educational and should be reviewed and tested before production use.
