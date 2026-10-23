@@ -21,6 +21,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 13 | Database replication, sharding, and partitioning | [Read lesson](docs/day-13-database-replication-sharding-and-partitioning.md) |
 | 14 | News feed system design | [Read lesson](docs/day-14-news-feed-system-design.md) |
 | 15 | Resilience: timeouts, retries, circuit breakers, and bulkheads | [Read lesson](docs/day-15-resilience-timeouts-retries-circuit-breakers.md) |
+| 16 | Event-driven architecture and pub/sub | [Read lesson](docs/day-16-event-driven-architecture-pub-sub.md) |
 
 ## Learning workflow
 
@@ -32,7 +33,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 
 ## Planned next topic
 
-**Day 16 — Event-Driven Architecture and Pub/Sub**: events, topics, subscriptions, fan-out, event contracts, and the trade-offs between event-driven and request-response communication.
+**Day 17 — Notification Service Design**: notification fan-out, user preferences, delivery retries, idempotency, provider limits, and monitoring.
 
 ## Suggested learning resources
 
