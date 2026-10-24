@@ -22,6 +22,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 14 | News feed system design | [Read lesson](docs/day-14-news-feed-system-design.md) |
 | 15 | Resilience: timeouts, retries, circuit breakers, and bulkheads | [Read lesson](docs/day-15-resilience-timeouts-retries-circuit-breakers.md) |
 | 16 | Event-driven architecture and pub/sub | [Read lesson](docs/day-16-event-driven-architecture-pub-sub.md) |
+| 17 | Notification service design | [Read lesson](docs/day-17-notification-service-design.md) |
 
 ## Learning workflow
 
@@ -33,7 +34,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 
 ## Planned next topic
 
-**Day 17 — Notification Service Design**: notification fan-out, user preferences, delivery retries, idempotency, provider limits, and monitoring.
+**Day 18 — Search Architecture**: indexing pipelines, inverted indexes, query serving, freshness, ranking, and scaling.
 
 ## Suggested learning resources
 
