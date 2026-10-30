@@ -23,6 +23,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 15 | Resilience: timeouts, retries, circuit breakers, and bulkheads | [Read lesson](docs/day-15-resilience-timeouts-retries-circuit-breakers.md) |
 | 16 | Event-driven architecture and pub/sub | [Read lesson](docs/day-16-event-driven-architecture-pub-sub.md) |
 | 17 | Notification service design | [Read lesson](docs/day-17-notification-service-design.md) |
+| 18 | Search architecture | [Read lesson](docs/day-18-search-architecture.md) |
 
 ## Learning workflow
 
@@ -34,7 +35,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 
 ## Planned next topic
 
-**Day 18 — Search Architecture**: indexing pipelines, inverted indexes, query serving, freshness, ranking, and scaling.
+**Day 19 — Object Storage and File Upload System Design**: object storage, metadata, upload/download flows, presigned access, durability, lifecycle policies, and secure file handling.
 
 ## Suggested learning resources
 
