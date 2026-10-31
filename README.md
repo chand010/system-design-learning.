@@ -24,6 +24,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 16 | Event-driven architecture and pub/sub | [Read lesson](docs/day-16-event-driven-architecture-pub-sub.md) |
 | 17 | Notification service design | [Read lesson](docs/day-17-notification-service-design.md) |
 | 18 | Search architecture | [Read lesson](docs/day-18-search-architecture.md) |
+| 19 | Object storage and file upload system design | [Read lesson](docs/day-19-object-storage-and-file-upload-system-design.md) |
 
 ## Learning workflow
 
@@ -35,7 +36,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 
 ## Planned next topic
 
-**Day 19 — Object Storage and File Upload System Design**: object storage, metadata, upload/download flows, presigned access, durability, lifecycle policies, and secure file handling.
+**Day 20 — CDN and Edge Caching**: origin servers, points of presence, cache keys, TTLs, invalidation, private content, and cache security.
 
 ## Suggested learning resources
 
