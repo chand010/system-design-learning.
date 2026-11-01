@@ -297,6 +297,16 @@ References:
 
 **Why this matters:** even when an object delete is strongly consistent at the storage origin, a public CDN or browser cache may still serve a cached copy until its cache policy expires. Sensitive temporary objects should not be publicly cacheable.
 
+**Origin deletion and CDN deletion are separate operations.** A CDN may offer explicit cache removal or a softer invalidation/revalidation operation. For example, Cloudflare documents:
+- **Purge:** remove the matching cached representation. The next request fetches the full response from the origin or an upstream cache.
+- **Invalidate (soft purge):** keep the object but mark it stale. The next request revalidates it; depending on policy and origin health, stale content may still be served while revalidation occurs or when the origin fails.
+
+For sensitive content that must no longer be served, do not assume a soft invalidation is equivalent to a purge. Update or remove the origin object first, then purge the narrowest matching URL/tag/prefix. Verify with a new request and the provider's cache-status headers and origin logs. Cloudflare notes that an HTTP 200 response from its purge API confirms receipt of the request, not by itself that a specific edge object has been evicted.
+
+This is provider-specific behavior, not a universal CDN contract. Browser caches, other CDN layers, object versions, soft-delete settings, replicas, and backups may have separate retention behavior. Use `Cache-Control: private, no-store` and an explicit cache-bypass policy for sensitive temporary content rather than relying on deletion alone.
+
+Reference: [Cloudflare — Invalidate cached content](https://developers.cloudflare.com/cache/guides/invalidate-cache/) (source page reports last updated 29 September 2026; checked 1 November 2026).
+
 ### Versioning
 
 Versioning can preserve previous object versions after an overwrite or delete, helping recover from accidental changes. It also increases storage use and can conflict with a strict deletion policy.
@@ -510,3 +520,8 @@ A strong answer: delete through the application workflow, verify the provider's 
 | [Google Cloud Object Lifecycle Management](https://docs.cloud.google.com/storage/docs/lifecycle) | Current official documentation checked; no comparable last-updated date captured. | Used for lifecycle and asynchronous deletion guidance. No historical change claimed. |
 
 **Monitoring outcome:** No verified material source-content change was established that requires rewriting an existing lesson. Source dates and current provider behavior are recorded carefully; without earlier page snapshots, a changed or newly observed date is not treated as proof of an exact content change. The existing Day 12 consistency explanation remains accurate at its general level. No existing lesson or `RESOURCE-CHANGELOG.md` entry was changed in this review. This Day 19 note records the date checked and the references used.
+
+
+### CDN cache follow-up — checked 1 November 2026
+
+The current [Cloudflare invalidation guide](https://developers.cloudflare.com/cache/guides/invalidate-cache/) (last updated 29 September 2026) distinguishes purge from soft invalidation and describes how to verify cache behavior after an operation. This clarifies the earlier CDN-deletion warning above. No exact source-text diff is claimed because an earlier snapshot of this page was not preserved.
