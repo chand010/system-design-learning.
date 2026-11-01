@@ -38,7 +38,36 @@ Ask: How stale can this data safely be? A product description may tolerate a sho
 
 Mitigations can include TTLs with jitter, request coalescing, bounded memory, access controls, safe key design, and explicit invalidation.
 
-## 5. Tiny Python example
+## 5. Cache-key design and representation isolation
+
+A **cache key** identifies the particular response representation stored by a cache. It must distinguish requests when the returned content or security scope differs.
+
+For an application cache, a key might look like:
+
+```text
+product-list:v3:tenant-42:locale-sw:category-shoes:sort-price
+```
+
+For a CDN, the key may be based on the URL (scheme, host, path, and query string) plus selected request headers or cookies. The exact defaults differ by provider.
+
+Two mistakes are dangerous:
+
+- **Omitting a relevant dimension:** if a response varies by tenant, language, device, or another request attribute but the key ignores it, users may receive the wrong representation. If the omitted dimension is an authorization boundary, this can become a cross-user data leak.
+- **Including irrelevant dimensions:** tracking parameters or headers that do not change the response can create many cache entries and reduce the hit ratio.
+
+Design checklist:
+1. Identify every request attribute that changes the response body or access scope.
+2. Include required representation dimensions, or bypass a shared cache for private content.
+3. Exclude irrelevant parameters only after confirming they cannot change the response.
+4. Normalize URLs consistently between cache and origin.
+5. Test query-string, header, cookie, host, and locale variations.
+6. Inspect the provider's effective cache key and cache-status headers.
+
+Do not put raw access tokens or secrets in cache keys or logs. Do not casually solve private-response isolation by caching on an authorization header. A safe starting point is to bypass shared caching for user-specific responses unless a deliberate private-cache design has been tested.
+
+Reference: [Cloudflare — Cache keys](https://developers.cloudflare.com/cache/how-to/cache-keys/) (source page reports last updated 30 October 2026; checked 1 November 2026).
+
+## 6. Tiny Python example
 ```python
 cache = {}
 
@@ -68,4 +97,4 @@ A news homepage receives 10,000 requests per minute for the same top stories. Th
 - [GeeksforGeeks — Caching in System Design](https://www.geeksforgeeks.org/system-design/caching-system-design-concept-for-beginners/)
 
 ## Key takeaway
-Caching can reduce latency and backend load, but freshness, invalidation, capacity, and privacy must be designed deliberately.
+Caching can reduce latency and backend load, but freshness, invalidation, capacity, cache-key identity, and privacy must be designed deliberately.
