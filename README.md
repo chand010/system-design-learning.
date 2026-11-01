@@ -25,6 +25,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 | 17 | Notification service design | [Read lesson](docs/day-17-notification-service-design.md) |
 | 18 | Search architecture | [Read lesson](docs/day-18-search-architecture.md) |
 | 19 | Object storage and file upload system design | [Read lesson](docs/day-19-object-storage-and-file-upload-system-design.md) |
+| 20 | CDN and edge caching | [Read lesson](docs/day-20-cdn-and-edge-caching.md) |
 
 ## Learning workflow
 
@@ -36,7 +37,7 @@ A step-by-step, beginner-friendly system design course with notes, practical exe
 
 ## Planned next topic
 
-**Day 20 — CDN and Edge Caching**: origin servers, points of presence, cache keys, TTLs, invalidation, private content, and cache security.
+**Day 21 — API Gateway and Backend-for-Frontend (BFF)**: request routing, authentication, rate limiting, aggregation, gateway security, and trade-offs.
 
 ## Suggested learning resources
 
